@@ -21,7 +21,7 @@ namespace WinFormsApp5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            String[] files = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST1");
+            String[] files = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST1");  //STRING TO RETRIEVE FILE NAMES WITHIN A "NEEDS REVIEW FOLDER"//
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
 
@@ -33,7 +33,7 @@ namespace WinFormsApp5
 
             dataGridView1.DataSource = table;
 
-            String[] files1 = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST2");
+            String[] files1 = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST2"); //STRING TO RETRIEVE FILE NAMES WITHIN A "PENDING FOLDER"//
             DataTable table1 = new DataTable();
              table1.Columns.Add("File Name");
 
@@ -46,7 +46,7 @@ namespace WinFormsApp5
             dataGridView2.DataSource = table1;
 
 
-            String[] files2 = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST3");
+            String[] files2 = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST3"); //STRING TO RETRIEVE FILE NAMES WITHIN A "COMPLETED FOLDER"//
             DataTable table2 = new DataTable();
             table2.Columns.Add("File Name");
 
