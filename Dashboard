@@ -9,29 +9,68 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-
-namespace WinFormsApp2
+namespace WinFormsApp5
 {
     public partial class Form1 : Form
-    {
+    { 
+    
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            String[] files = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST1"); //this line of code allow us get the file names from the path and show on a data grid // 
+            String[] files = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST1");
             DataTable table = new DataTable();
-            table.Columns.Add("File Name"); // name of the column on the datagrid//
+            table.Columns.Add("File Name");
 
-            for (int i = 0; i < files.Length; i++) //This cycle inicializate the lookup//
+            for (int i = 0; i < files.Length; i++)
             {
                 FileInfo file = new FileInfo(files[i]);
                 table.Rows.Add(file.Name);
             }
 
             dataGridView1.DataSource = table;
+
+            String[] files1 = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST2");
+            DataTable table1 = new DataTable();
+             table1.Columns.Add("File Name");
+
+            for (int i = 0; i < files1.Length; i++)
+            {
+                FileInfo file1 = new FileInfo(files1[i]);
+                table1.Rows.Add(file1.Name);
+            }
+
+            dataGridView2.DataSource = table1;
+
+
+            String[] files2 = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST3");
+            DataTable table2 = new DataTable();
+            table2.Columns.Add("File Name");
+
+            for (int i = 0; i < files2.Length; i++)
+            {
+                FileInfo file2 = new FileInfo(files2[i]);
+                table2.Rows.Add(file2.Name);
+            }
+
+            dataGridView3.DataSource = table2;
+
         }
+
+       
     }
+
+    
+
+        
+           
+
+    
+           
+       
+    
+
 }
