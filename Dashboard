@@ -21,9 +21,9 @@ namespace WinFormsApp2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            String[] files = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST1");
+            String[] files = Directory.GetFiles(@"C:\Users\gonzalez.alejandro\Documents\TEST1"); //this line of code allow us get the file names from the path and show on a data grid // 
             DataTable table = new DataTable();
-            table.Columns.Add("File Name");
+            table.Columns.Add("File Name"); // name of the column on the datagrid//
 
             for (int i = 0; i < files.Length; i++) //This cycle inicializate the lookup//
             {
